@@ -1,6 +1,6 @@
-\documentclass[12pt,a4paper,twoside]{article} 
-\usepackage[latin1]{inputenc}
-\usepackage[english]{babel}
+\documentclass[12pt,a4paper,oneside,norsk]{article} 
+\usepackage[utf8]{inputenc}
+%\usepackage[norsk]{babel}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -14,6 +14,10 @@
 \usepackage[nottoc,numbib]{tocbibind}
 \usepackage{chngpage} % allows for temporary adjustment of side margins
 \usepackage[parfill]{parskip} %for avsnitt
+\usepackage[yyyymmdd,hhmmss]{datetime}
+\usepackage{comment} 
+\usepackage{caption}
+\captionsetup[figure]{labelformat=empty}
 
 \raggedbottom
 
@@ -21,6 +25,7 @@
 \makeindex
 
 \begin{document}
+%her kommer forsiden:
     \begin{titlepage}
     \begin{center}
     \ \\
@@ -29,12 +34,12 @@
     \ \\
     \ \\
     \ \\
-    Anders Dall'Osso Teigset \\
+    The Gentleman's Club \\
     \ \\
     \ \\
     \ \\
     \ \\{\large \bfseries
-    MEDIUM VOLTAGE LOAD BREAK SWITCH WITH AIR AS INTERRUPTING MEDIUM\\
+    The Gentleman's Club Official Alcoholic Beverages Chart\\
     }
     \ \\
     \ \\
@@ -42,10 +47,10 @@
     \ \\
     \ \\
     {\large
-    Specialisation project\\
+    Alcoholic Beverages Chart\\
     }
     \ \\
-    {December, 2013 \\}
+    {\today\ \\}
     \ \\
     \ \\
     \ \\
@@ -70,22 +75,68 @@
     \ \\
     \ \\
     \ \\
-   	{\large
-   Norwegian University of Science and Technology\\
-   Department of Electric Power Engineering\\
-    }
+   	\ \\
+    \ \\
+    \ \\
+    \ \\
    	\ \\
     \ \\
     \end{center}
     \end{titlepage}
     
     \thispagestyle{empty}
-\cleardoublepage
+\newpage
 
-\cleardoublepage
 \setcounter{page}{1}
 \pagenumbering{arabic}
+%her er innholdsfortegnelsen. Den lages automagisk
 \tableofcontents
-\cleardoublepage
+\newpage
 
+%HER ER EN LITEN BRUKSANVISNING
+%Nedenfor er en mal til hvordan man lager en subsubsection
+\begin{comment}
+%start å klipp og lim herifra, og lim det inn under riktig "subsection":
+
+\subsubsection{Bryggeri: NAVN PÅ ØL}
+\paragraph{Kommentar:} SKRIV DIN MENING HER
+\newline
+-- -- ( SKRIV NAVN OG DATO)
+
+\begin{figure} [H]
+\centering
+\includegraphics[scale=0.60]{Bilder/Øl/outcomeinterruption.png} %scale justerer størrelsen på bilde. Linjen etterpå er mappen bilde ligger i.
+\caption{SKRIV EN BILDE TEKST.}
+\end{figure}
+\newpage
+%stopp med klipp og lim her! --------------------------
+\end{comment}
+
+
+\section{Øl}
+\subsection{Bayer}
+
+\subsubsection{Det Lille Bryggeri: Bjønnøl}
+\paragraph{Kommentar:}Kjedelig og smakløst øl. Lever ikke opp til navnet og er ikke verdt pengene.
+\newline
+-- -- Isak 13.04.2014
+
+\begin{figure} [H]
+\centering
+\includegraphics[scale=1.00]{Bilder/Ol/bjonnol.png} %scale justerer størrelsen på bilde. Linjen etterpå er mappen bilde ligger i.
+\caption{Bjønnøl fra "Det Lille Bryggeri"}
+\end{figure}
+
+\newpage
+\subsection{Staut}
+
+\newpage
+\section{Vin}
+
+\newpage
+\section{Sprit}
+\subsection{Whisky}
+
+\newpage
+\subsection{Cognac}
 \end{document}
